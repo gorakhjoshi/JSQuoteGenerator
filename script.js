@@ -8,7 +8,6 @@ let apiQuotes = [];
 
 function newQuote() {
   const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
-
   if (!quote.author) {
     authorText.textContent = 'unknown';
   } else {
@@ -40,5 +39,6 @@ function tweetQuote() {
 }
 
 twitterBtn.addEventListener('click', tweetQuote);
+newQuoteBtn.addEventListener('click', newQuote);
 
 getQuotes();
